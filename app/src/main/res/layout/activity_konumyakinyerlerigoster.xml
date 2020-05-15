@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/harita_yakinyerler"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:gravity="center_horizontal"
+        tools:context=".MainActivity">
+
+
+        <EditText
+            android:id="@+id/editText_AramaOner"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:drawable/editbox_background"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/button_Otel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="3dp"
+            android:background="#3F51B5"
+            android:padding="8dp"
+            android:text="Oteller"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button_Restorant"
+            app:layout_constraintEnd_toStartOf="@+id/button_Restorant"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button_Restorant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="2dp"
+            android:background="#FF5722"
+            android:padding="8dp"
+            android:text="Restorantlar"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toStartOf="@+id/button_Hastane"
+            app:layout_constraintStart_toEndOf="@+id/button_Otel"
+            app:layout_constraintTop_toBottomOf="@+id/editText_AramaOner" />
+
+        <Button
+            android:id="@+id/button_Hastane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:background="#00BCD4"
+            android:padding="8dp"
+            android:text="Hastaneler"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button_Restorant"
+            app:layout_constraintEnd_toStartOf="@+id/button_ATM"
+            app:layout_constraintStart_toEndOf="@+id/button_Restorant" />
+
+        <Button
+            android:id="@+id/button_ATM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="9dp"
+            android:background="#4CAF50"
+            android:padding="8dp"
+            android:text="ATM'ler"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button_Hastane"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_Hastane" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+
+
+
+

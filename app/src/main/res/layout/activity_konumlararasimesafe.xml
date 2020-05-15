@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/harita_konumlararasi_mesafe"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.ent.pedometer.ui.MapsActivity" />
+
+    <LinearLayout
+        android:id="@+id/LayoutBilgi"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/textViewBilgi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:scrollHorizontally="false"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Ulaşım Şekli"
+            android:textColor="#009688"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:id="@+id/radiogroupulasimsekli">
+
+
+            <RadioButton
+                android:id="@+id/yuruyus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yuruyus"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/arac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/arac" />
+
+
+        </RadioGroup>
+    </LinearLayout>
+
+</FrameLayout>
