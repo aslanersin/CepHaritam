@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         konumlariListele.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent oluşturularak Konumları Listeleme çağrılıyor. çağrılıyor.
+                //Intent oluşturularak Konumları Listeleme çağrılıyor.
                 Intent intKonumlariListele=new Intent("android.intent.action.EKLEKONUMLISTELE");
                 startActivity(intKonumlariListele);
 
