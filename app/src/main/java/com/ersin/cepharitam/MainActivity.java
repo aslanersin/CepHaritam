@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         etrafiniKestfet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent oluşturularak Konumları Listeleme çağrılıyor. çağrılıyor.
+                //Intent oluşturularak Etrafını Keşfet Çağrılıyor
                 Intent intKonumYakinYerler=new Intent("android.intent.action.KONUMYAKINYERLERILISTELE");
                 startActivity(intKonumYakinYerler);
 
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         yolTarifi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent oluşturularak Konumları Listeleme çağrılıyor. çağrılıyor.
+                //Intent oluşturularak Yol Tarifi Çağrılıyor
                 Intent intYolTarifi=new Intent("android.intent.action.KONUMLARARASIMESAFE");
                 startActivity(intYolTarifi);
 
